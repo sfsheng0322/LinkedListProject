@@ -154,7 +154,7 @@ public class SingleLinkedList {
 		head = pre;
 		return head;
 	}
-	
+	//判断链表是否为环链表：两个指针slow，fast都从头开始遍历单链表，slow每次向前走1步，fast每次向前走2步，如果fast碰到了null，说明环不存在；如果fast碰到本应在身后的slow说明环存在。
 	public boolean isLoop() {
 		if (head == null || head.getNextNode() == null) {
 			return false;
@@ -192,10 +192,8 @@ public class SingleLinkedList {
 //		singleLinkedList.reverse();
 //		singleLinkedList.printAllNode();
 		
-		
 //		singleLinkedList.searchNode("c").setNextNode(singleLinkedList.searchNode("java"));
-//		singleLinkedList.printAllNode();
-		System.out.println("isLoop: "+singleLinkedList.isLoop());
+//		System.out.println("isLoop: "+singleLinkedList.isLoop());
 		
 	}
 
